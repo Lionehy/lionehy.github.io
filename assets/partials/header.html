@@ -1,0 +1,257 @@
+<header id="header" class="header ">
+		<div class="header-wrapper">
+			<div id="top-bar" class="header-top hide-for-sticky hide-for-medium">
+    <div class="flex-row container">
+      <div class="flex-col hide-for-medium flex-left">
+          <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
+              <li class="html custom html_topbar_left"><p><span style="visibility: hidden;">Carta Nombre Demo</span></p></li><style>
+                            .info-bubble {
+                                display: none;
+                                position: absolute;
+                                background-color: #f9f9f9;
+                                border: 1px solid #62c463;
+                                border-radius: 4px;
+                                padding: 6px;
+                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                left: 100%;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                white-space: nowrap;
+                                z-index: 1000;
+                                margin-left: 5px; /* Ajustado para dar espacio a la flecha */
+                                font-size :0.73em;
+                            }
+
+                            .info-bubble::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: -12px; /* Ajustado para alinear con el borde del bubble */
+                                transform: translateY(-50%);
+                                border-width: 7px 12px 7px 0; /* Aumentado para crear el borde de la flecha */
+                                border-style: solid;
+                                border-color: transparent #62c463 transparent transparent; /* Color del borde de la flecha */
+                                z-index: 0; /* Asegura que esté detrás del cuerpo de la flecha */
+                            }
+
+                            .info-bubble::after {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: -11px; /* Ajustado para alinear con el cuerpo de la flecha /
+                                transform: translateY(-50%);
+                                border-width: 6px 11px 6px 0; / Ajustado para crear el cuerpo de la flecha /
+                                border-style: solid;
+                                border-color: transparent #f9f9f9 transparent transparent; / Color del cuerpo de la flecha /
+                                z-index: 1; / Asegura que esté en frente del borde de la flecha */
+                            }
+                    </style><script>
+                    var checkboxState = localStorage.getItem('checkboxState_dish_menu_letter_counter');
+                    if (checkboxState === 'checked') {
+                        document.querySelector('.select-input').checked = true;
+                    }
+                </script><div id="counter" class="lightbox-by-id lightbox-content mfp-hide lightbox-white" style="padding: 0 15px 30px;"><div id="content_dishes_table_total"><h3>Lo que deseas pedir:</h3><table id="dishes_table">
+            <thead>
+                <tr>
+                    <th class="dish-name">Nombre</th>
+                    <th class="dish-quantity">Cantidad</th>
+                    <th class="dish-price">Precio</th>
+                </tr>
+            </thead>
+            <tbody id="counter_content">
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="2" class="total-label">Total:</td>
+                    <td class="dish-price" id="total_price">0</td>
+                </tr>
+            </tfoot>        
+        </table>
+        <div class="observations">
+            <label for="observations_dish_menu_letter">Observaciones:</label>
+            <textarea style="color: #666; font-size: .9em;" id="observations_dish_menu_letter"></textarea>
+        </div></div></div><style>          
+            /* Establecer el ancho de las columnas y alinear el texto */
+            .dish-name {
+                width: 145px;
+                font-size: 14px;
+            }
+            .dish-quantity {
+                width: 120px;
+                text-align: center;
+            }    
+            .dish-price {
+                width: 75px;
+                min-width: 75px;
+                text-align: right;
+                padding-right: 5px !important;            
+            }     
+            .total-row {
+                font-weight: bold;
+                border-top: 2px solid black;
+                background-color: #f0f0f0;
+            }
+            .total-label {
+                text-align: right;
+                padding-right: 30px !important;
+            }    
+            .counter {
+                display: inline-block;
+                width: 20px; /* Ajusta este valor según sea necesario */
+                text-align: center;
+                font-size: 15px; /* Ajusta este valor según sea necesario */        
+            }
+            #counter .observations {
+                margin-bottom: 30px;
+            }
+            .page-id-18 .mfp-content, .mfp-content {
+                transform: inherit !important;
+            }
+            .icono-carrito {
+                width: 24px;
+                height: 24px;
+            }
+            .icon-carrito {
+                position: absolute;
+                left: 12px;
+                display: flex;
+                align-items: center;
+                bottom: 14px;
+                background-color: #62c463;
+                border-radius: 999px;
+                height: 60px;
+                width: 60px;
+                justify-content: center;
+                border: solid 2px #fff;
+            }
+            .burbuja {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 20px;
+                height: 20px;
+                background-color: #fff;
+                color: #62c463;
+                border-radius: 50%;
+                font-size: 12px;
+                border: 1px solid #62c463;
+                margin-left: -6px;
+                z-index: 1;
+                margin-top: -20px;
+            }
+        </style><li style="display:none;" class="dish_menu_letter_counter html custom html_topbar_left"><div class="icocounter"><a href="#counter"><img style="width: 24px;" src="https://menu.es/images/ico-counter.svg"><span class="bg-red-total-icocounter" id="total_counter">0</span></a></div></li><li class="html custom html_nav_position_text">
+
+</li>          </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-center">
+          <ul class="nav nav-center nav-small  nav-divided">
+                        </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-right">
+         <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
+              <li class="html custom html_top_right_text html_filter"><div class="filter"><a href="#filter"><img style="width: 24px;" src="https://menu.es/images/ico-filter.png"><span class="bg-red-total-filters" id="total-filters">0</span></a></div></li><div id="filter" class="lightbox-by-id lightbox-content mfp-hide lightbox-white" style="padding: 0 15px 30px;"><div style="text-align:right;"><span onclick="filter()" style="cursor:pointer;"><img class="back" style="width: 35px; vertical-align: middle;" src="https://menu.es/images/back.png"> Filtrar</div><div id="checkbox-filters"><style>
+                        .options-filter li {
+                            padding: 10px; /* Ajusta el padding según lo que necesites */
+                            cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+                            display: flex; /* Asegura que los elementos dentro del li estén alineados horizontalmente */
+                            align-items: center; /* Centra verticalmente los elementos dentro del li */
+                        }
+                        .container-filter {
+                            flex-grow: 1; /* Hace que el label crezca para ocupar todo el espacio disponible */
+                        }
+                        .html_filter {margin-right: 12px !important;}
+                        </style><h3>MOSTRAR PLATOS:</h3>
+    <!-- Lista withoutgluten -->
+    <form id="withoutgluten-form">
+        <ul class="options-filter">
+            <li><label class="container-filter"><input type="checkbox" id="withoutgluten" name="fl" value="withoutgluten"> Sin gluten<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/singluten.svg" /></li>
+            <li><label class="container-filter"><input type="checkbox" id="vegan" name="fl" value="vegan"> Vegano<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/vegan.svg" /></li>
+            <li><label class="container-filter"><input type="checkbox" id="vegetarian" name="fl" value="vegetarian"> Vegetariano<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/vegetarian.svg" /> </li>            
+            <li><label class="container-filter"><input type="checkbox" id="spicy" name="fl" value="spicy"> Sin Picante<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/chili.svg" /> </li>
+            <li><label class="container-filter"><input type="checkbox" id="tartrazine" name="fl" value="tartrazine"> Tartrazina<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/tartrazine.svg" /> </li>
+        </ul>
+    </form>
+    <h3>OCULTAR PLATOS CON:</h3>                
+    <!-- Lista con alergenos -->
+    <form id="allergens-form">
+        <ul class="options-filter">
+            <li><label class="container-filter"><input type="checkbox" id="gluten" name="fa" value="gluten"> Gluten<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/gluten.svg" /></li>
+            <li><label class="container-filter"><input type="checkbox" id="crustaceans" name="fa" value="crustaceans"> Crustáceos<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/crustaceans.svg" /></li>
+            <li><label class="container-filter"><input type="checkbox" id="azufre" name="fa" value="azufre"> Dióxido azufre<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/azufre.svg" /></li>
+            <li><label class="container-filter"><input type="checkbox" id="eggs" name="fa" value="eggs"> Huevos<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/eggs.svg" /></li>
+            <li><label class="container-filter"><input type="checkbox" id="fish" name="fa" value="fish"> Pescado<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/fish.svg" /></li>                
+            <li><label class="container-filter"><input type="checkbox" id="peanuts" name="fa" value="peanuts"> Cacahuetes<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/peanuts.svg" /></li>
+            <li><label class="container-filter"><input type="checkbox" id="soy" name="fa" value="soy"> Soja<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/soy.svg" /></li>
+            <li><label class="container-filter"><input type="checkbox" id="milk" name="fa" value="milk"> Lácteos<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/milk.svg" /></li>
+            <li><label class="container-filter"><input type="checkbox" id="nuts" name="fa" value="nuts"> Frutos de Cáscara<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/nuts.svg" /></li>
+            <li><label class="container-filter"><input type="checkbox" id="celery" name="fa" value="celery"> Apio<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/celery.svg" /></li>        
+            <li><label class="container-filter"><input type="checkbox" id="mustard" name="fa" value="mustard"> Mostaza<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/mustard.svg" /></li>        
+            <li><label class="container-filter"><input type="checkbox" id="sesame" name="fa" value="sesame"> Semillas de Sésamo<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/sesame.svg" /></li>        
+            <li><label class="container-filter"><input type="checkbox" id="sulphites" name="fa" value="sulphites"> Sulfitos<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/sulphites.svg" /></li>        
+            <li><label class="container-filter"><input type="checkbox" id="molluscs" name="fa" value="molluscs"> Moluscos<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/molluscs.svg" /></li>                
+            <li><label class="container-filter"><input type="checkbox" id="lupin" name="fa" value="lupin"> Altramuces<span class="checkmark-filter"></span></label> <img width="30xp" src="https://menu.es/images/lupin.svg" /></li> 
+        </ul>
+    </form>    
+    </div></div><li class="html custom html_top_right_text"><div class="search_box"><a href="#search_box"><img style="width: 24px;" src="https://menu.es/images/ico-search.png"></a></div></li><div id="search_box" class="lightbox-by-id lightbox-content mfp-hide lightbox-white" style="padding: 0 15px 30px;"><div id="id_search_box"><input type="text" id="text_search_box" placeholder="Plato o Bebida a buscar" style="width: 24em; flex-grow: 1; margin-right: 10px;"><input type="hidden" name="fl" value=""><input type="hidden" name="fa" value=""><div id="result_search_box"></div></div></div><li class="html custom html_top_right_text">
+</li><li style="position:relative;" class="menu-item menu-item-gtranslate"><div style="position:absolute;white-space:nowrap;" id="gtranslate_menu_wrapper_38782"></div></li>          </ul>
+      </div>
+
+      
+    </div>
+</div>
+<div id="masthead" class="header-main show-logo-center hide-for-sticky">
+      <div class="header-inner flex-row container logo-center medium-logo-center" role="navigation">
+
+                <!-- Logo -->
+                <div id="logo" class="flex-col logo">
+                    <!-- Header logo -->
+                    <a href="index.html" title="" rel="home">
+		            </a>
+                </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+                          </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            ">
+            <ul class="header-nav header-nav-main nav nav-left  nav-uppercase" >
+                          </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
+                          </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+                          </ul>
+          </div>
+
+      </div>
+
+      </div>
+<div id="wide-nav" class="header-bottom wide-nav hide-for-sticky flex-has-center hide-for-medium">
+    <div class="flex-row container">
+
+            
+                        <div class="flex-col hide-for-medium flex-center">
+                <ul class="nav header-nav header-bottom-nav nav-center  nav-uppercase">
+                    <li class="html custom html_topbar_right"><style type="text/css">.header-inner.container {padding-left: 0;padding-right: 0;margin-top:-20px;} .header-inner.container #logo {width: 100%;margin: 0;} .home .header-main, .page-template-page-grupos .header-main {height: 230px !important;}.header-wrapper #logo a {content: url(https://menu.es/plantilla/wp-content/uploads/sites/2/2023/11/img-restaurant-aspect-ratio-550-250-1.jpg);width: 100%;height: 230px;object-fit: cover;padding: 0px;overflow: hidden; }</style></li>                </ul>
+            </div>
+            
+            
+            
+    </div>
+</div>
+
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div>		</div>
+	</header>
